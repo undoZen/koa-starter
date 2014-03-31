@@ -24,7 +24,8 @@ if ('development' == app.env) {
       .map(global.js)
       .map(function (filePath) {
         return '<script src="' + filePath + '"></script>';
-      });
+      })
+      .join('');
   }
 
   app.use(koa.mount('/client/css', function *(next) {
