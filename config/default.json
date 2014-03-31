@@ -1,0 +1,4 @@
+{
+  "CONFIG_EXPOSE_TO_CLIENT": ["staticPrefix"],
+  "staticPrefix": "/dist"
+}

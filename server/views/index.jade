@@ -1,0 +1,25 @@
+extend layout
+block page
+  .starter-template
+    h1 Bootstrap starter template
+    p
+      | lead Use this document as a way to quickly start any new project.
+      br
+      | All you get is this text and a mostly barebones HTML document.
+    img(src=img('logo.png'), height=160)
+    -var name = 'World'
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title included in server-side
+      .panel-body
+        include ../../both/views/hello
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title included in client-side
+      .panel-body#client-side
+
+block css
+  link(rel='stylesheet', href=css('style.css'))
+
+block js
+  script(src=js('index.js'))

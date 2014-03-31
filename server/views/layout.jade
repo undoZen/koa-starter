@@ -1,0 +1,49 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title Starter Template for Bootstrap
+
+    link(rel='stylesheet', href=css('bootstrap.css'))
+    block css
+
+    script!= 'window.CONFIG = ' + JSON.stringify(CLIENT_CONFIG) + ';'
+    script.
+      window.C = {};
+
+    |<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    |<!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  body
+    .navbar.navbar-inverse.navbar-fixed-top(role="navigation")
+      .container
+        .navbar-header
+          button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href="#") koa-starter
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav.pull-right
+            li.active: a(href="#") Home
+            li: a(href="https://github.com/undoZen/koa-starter") Fork me on GitHub
+          //.dropdown
+            a.dropdown-toggle(href="#", data-toggle="dropdown")
+              | Heymi
+              b.caret
+            ul.dropdown-menu
+              li: a(href="#") Action
+              li: a(href="#") Another Action
+              li: a(href="#") Something else here
+              li.divider
+              li.dropdown-header Nav header
+              li: a(href="#") Separated link
+              li: a(href="#") One more separated link
+    .container
+      block page
+
+    != jslib()
+    block js

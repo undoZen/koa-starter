@@ -1,0 +1,52 @@
+{
+  "name": "koa-starter",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:undoZen/koa-starter.git"
+  },
+  "author": "undoZen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/undoZen/koa-starter/issues"
+  },
+  "homepage": "https://github.com/undoZen/koa-starter",
+  "dependencies": {
+    "debug": "latest",
+    "co": "latest",
+    "jade": "latest",
+    "koa-compose": "latest",
+    "koa": "latest",
+    "koa-route": "latest",
+    "thunkify": "latest",
+    "co-views": "latest",
+    "co-body": "latest",
+    "koa-common": "latest",
+    "config": "latest",
+    "lodash": "latest",
+    "co-nth-arg": "latest"
+  },
+  "devDependencies": {
+    "browserify": "latest",
+    "browserify-jade": "latest",
+    "less": "latest",
+    "gulp": "latest",
+    "gulp-concat": "latest",
+    "gulp-uglify": "latest",
+    "through2": "latest",
+    "streamqueue": "latest",
+    "vinyl-map": "latest",
+    "gulp-less": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-clean": "latest",
+    "gulp-rev": "latest",
+    "gulp-rename": "latest",
+    "stream-combiner": "latest"
+  }
+}

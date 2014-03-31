@@ -1,0 +1,6 @@
+[
+  "../../node_modules/lodash/dist/lodash.compat.js",
+  "../../node_modules/jade/runtime.js",
+  "../bower_components/jquery/dist/jquery.js",
+  "../bower_components/bootstrap/js/dropdown.js"
+]
