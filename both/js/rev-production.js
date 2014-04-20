@@ -10,8 +10,8 @@ var staticPrefix = CONFIG.staticPrefix || '/dist';
 
 'css js img'.split(' ').forEach(function (d) {
   global[d] = function (filePath) {
-    var revvedFilePath = rev['/'+d+'/' + filePath];
+    var revvedFilePath = rev[d+'/' + filePath];
     if (!revvedFilePath) return null;
-    return staticPrefix + revvedFilePath;
+    return staticPrefix + '/' + revvedFilePath;
   }
 });

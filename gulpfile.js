@@ -132,14 +132,14 @@ gulp.task('build-css', ['clean', 'build-assets'], function () {
     .pipe(through.obj(function (obj, enc, cb) {
       var contents = obj.contents.toString('utf-8');
       var contents = contents.replace(filePathRegex, function (all, left, filePath, right) {
-      var staticPrefix = config.staticPrefix || '/dist';
+        var staticPrefix = config.staticPrefix || '/dist';
         var index, search;
-        filePath = filePath.slice(2);
+        filePath = filePath.slice(3);
         if ((index=filePath.indexOf('?'))>-1 || (index=filePath.indexOf('#'))>-1) {
           search = filePath.substring(index);
           filePath = filePath.substring(0, index);
         }
-        if (revMap[filePath]) return left + staticPrefix + revMap[filePath] + (search || '') + right;
+        if (revMap[filePath]) return left + staticPrefix + '/' + revMap[filePath] + (search || '') + right;
         else return all;
       });
       obj.contents = new Buffer(contents);

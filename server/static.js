@@ -80,6 +80,6 @@ if ('development' == app.env) {
   require('../both/js/rev-production.js');
 
   global.jslib = function() {
-    return '<script src="' + (CONFIG.staticPrefix || '/dist') + require('../dist/js-lib-rev.json')['/js/lib.js'] + '"></script>';
+    return '<script src="' + (CONFIG.staticPrefix || '/dist') + '/' + require('../dist/js-lib-rev.json')['js/lib.js'] + '"></script>';
   }
 }
